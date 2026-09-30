@@ -1,0 +1,41 @@
+/* Montserrat gives the brand structure; Fira Sans carries interface copy. */
+.future-landing h1,
+.future-landing h2,
+.future-landing h3,
+.future-flow h1,
+.future-flow h2,
+.chapter-body h3 {
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+.future-landing .hero h1 {
+  font-weight: 750;
+  font-size: clamp(3.15rem, 5.35vw, 5.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+.hero-line {
+  padding-inline: 0.02em;
+}
+.hero-line > em {
+  padding-bottom: 0.05em;
+}
+.kinetic-ribbon,
+.chapter-bottom > span:last-child,
+.stat-value,
+.score-inside strong {
+  font-family: var(--font-heading);
+}
+.kinetic-ribbon {
+  letter-spacing: -0.035em;
+}
+.field label,
+.btn,
+.side-link {
+  letter-spacing: 0;
+}
+@media (max-width: 767px) {
+  .future-landing .hero h1 {
+    font-size: clamp(2.45rem, 9.3vw, 4.1rem);
+  }
+}

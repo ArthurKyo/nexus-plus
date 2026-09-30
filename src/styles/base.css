@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--background);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+a,
+button {
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+h3 {
+  font-size: 1.15rem;
+}
+p {
+  color: var(--muted);
+}
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+small,
+.small {
+  font-size: 0.875rem;
+}
+.muted {
+  color: var(--muted);
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  background: var(--surface);
+  padding: 12px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.brand {
+  font-family: var(--font-heading);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+.brand .plus {
+  color: var(--primary);
+}
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--primary);
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-size: 23px;
+  letter-spacing: -3px;
+  padding-right: 3px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  min-height: 46px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--surface);
+  white-space: normal;
+}
+.btn:hover {
+  background: var(--surface-alt);
+  border-color: var(--border);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #fff;
+}
+[data-theme="dark"] .btn-primary {
+  color: #101b36;
+}
+.btn-lime {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #172d19;
+}
+.btn-lime:hover {
+  background: #b4e357;
+}
+.btn-danger {
+  background: var(--error);
+  color: var(--surface);
+  border-color: var(--error);
+}
+.btn-sm {
+  padding: 8px 13px;
+  min-height: 38px;
+  font-size: 0.875rem;
+}
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  flex-shrink: 0;
+}
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 7px;
+  padding: 5px 9px;
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-green {
+  background: #e5f5e9;
+  color: #236841;
+}
+.badge-blue {
+  background: #eaf0ff;
+  color: #254ac8;
+}
+.badge-warning {
+  background: #fff0d5;
+  color: #835612;
+}
+.card-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  box-shadow: var(--shadow);
+}
+.row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.row-head h2,
+.row-head h3,
+.row-head p {
+  margin: 0;
+}
+.stack {
+  display: grid;
+  gap: 24px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.section-title {
+  max-width: 640px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+.section-title p {
+  margin-top: 18px;
+}
+p a,
+.notice a,
+.consent-box a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
